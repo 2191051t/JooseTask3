@@ -35,6 +35,7 @@ public abstract class Board extends Observable implements Observer {
     private int defaultSpeed = 5;
     private Board thisBoard;
     private JPanel display;
+    protected boolean starveBirdspressed;
     protected boolean panelHasBeenResized = false;
     FlyBehaviour flyBehaviour;
     

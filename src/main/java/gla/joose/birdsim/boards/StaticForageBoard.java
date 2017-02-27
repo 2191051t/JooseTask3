@@ -24,7 +24,6 @@ public class StaticForageBoard extends Board{
     JButton scareBirdsButton;
     boolean scareBirds;
     JButton starveBirdsButton;
-    boolean starveBirdspressed;
     
     JLabel noOfGrainsLabel;
     JLabel noOfBirdsLabel;
