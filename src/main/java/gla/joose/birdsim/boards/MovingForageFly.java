@@ -10,7 +10,11 @@ import gla.joose.birdsim.util.DistanceMgr;
 
 public class MovingForageFly implements FlyBehaviour{
 		Random rand = new Random();
-		public void fly(Board board){
+		Board board;
+		public MovingForageFly(Board board){
+			this.board = board;
+		}
+		public void fly(){
 			Bird bird = new Bird();
 			
 			int randRow = rand.nextInt((board.getRows() - 3) + 1) + 0;

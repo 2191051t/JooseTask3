@@ -16,16 +16,11 @@ import javax.swing.JPanel;
  */
 public class FlockBoard extends Board{
 
-    JPanel buttonPanel;
-    JButton hatchEggButton;
-    JButton scareBirdsButton;
-    JLabel noOfBirdsLabel;
-    
-    Thread runningthread;
+
     
 	public FlockBoard(int rows, int columns) {
 		super(rows, columns);	
-		flyBehaviour = new FlockFly();
+		flyBehaviour = new FlockFly(this);
 	}
 
 	@Override

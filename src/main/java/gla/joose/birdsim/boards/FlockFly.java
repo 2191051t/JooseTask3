@@ -6,7 +6,11 @@ import gla.joose.birdsim.pieces.Bird;
 
 public class FlockFly implements FlyBehaviour {
 	Random rand = new Random();
-	public void fly(Board board) {
+	Board board;
+	public FlockFly(Board board){
+		this.board = board;
+	}
+	public void fly() {
 		
 		Bird bird = new Bird();
 		

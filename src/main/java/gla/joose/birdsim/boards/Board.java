@@ -14,7 +14,9 @@ import java.util.Random;
 import java.util.Stack;
 import java.util.Vector;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import gla.joose.birdsim.pieces.Bird;
@@ -44,6 +46,12 @@ public abstract class Board extends Observable implements Observer {
     protected boolean starveBirds;
     protected int noofbirds;
     protected int noofgrains;
+    JPanel buttonPanel;
+    JButton hatchEggButton;
+    JButton scareBirdsButton;
+    JLabel noOfBirdsLabel;
+    
+    Thread runningthread;
 
 
     /**
@@ -97,7 +105,7 @@ public abstract class Board extends Observable implements Observer {
     	flyBehaviour = fb;
     }
     public void performFly(){
-    	flyBehaviour.fly(this);
+    	flyBehaviour.fly();
     }
     
     

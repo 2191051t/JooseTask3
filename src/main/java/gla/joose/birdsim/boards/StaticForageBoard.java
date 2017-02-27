@@ -32,7 +32,7 @@ public class StaticForageBoard extends Board{
         
 	public StaticForageBoard(int rows, int columns) {
 		super(rows, columns);		
-		flyBehaviour = new StaticForageFly();
+		flyBehaviour = new StaticForageFly(this);
 	}
 
 	@Override

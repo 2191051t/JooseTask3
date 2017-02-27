@@ -31,7 +31,7 @@ public class MovingForageBoard extends Board{
         
 	public MovingForageBoard(int rows, int columns) {
 		super(rows, columns);
-		flyBehaviour = new MovingForageFly();
+		flyBehaviour = new MovingForageFly(this);
 	}
 
 	@Override
