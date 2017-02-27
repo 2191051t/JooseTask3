@@ -11,7 +11,6 @@ import gla.joose.birdsim.util.DistanceMgr;
 public class StaticForageFly implements FlyBehaviour {
 	Random rand = new Random();
 	public void fly(Board board) {
-		
 		Bird bird = new Bird();
 		
 		int randRow = rand.nextInt((board.getRows() - 3) + 1) + 0;
@@ -68,7 +67,8 @@ public class StaticForageFly implements FlyBehaviour {
 					else if(d.getRowDist() < 0){
 						boolean can_move_down= bird.canMoveTo(current_row+1, current_col);
 			    		if(can_move_down){
-							bird.moveTo(current_row+1, current_col);
+							bird.moveTo(current_row
+									+1, current_col);
 							movedone = true;
 							break;
 						}

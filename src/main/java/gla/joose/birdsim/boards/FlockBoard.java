@@ -24,7 +24,8 @@ public class FlockBoard extends Board{
     Thread runningthread;
     
 	public FlockBoard(int rows, int columns) {
-		super(rows, columns);		
+		super(rows, columns);	
+		flyBehaviour = new FlockFly();
 	}
 
 	@Override
@@ -43,7 +44,7 @@ public class FlockBoard extends Board{
             	scareBirds = false;
             	runningthread = new Thread(new Runnable(){
 					public void run() {
-						fly();
+						performFly();
 					}            		
             	});
             	runningthread.start();

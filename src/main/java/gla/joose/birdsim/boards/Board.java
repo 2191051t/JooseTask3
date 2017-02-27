@@ -36,6 +36,7 @@ public abstract class Board extends Observable implements Observer {
     private Board thisBoard;
     private JPanel display;
     protected boolean panelHasBeenResized = false;
+    FlyBehaviour flyBehaviour;
     
     protected Random rand;
     protected boolean scareBirds;
@@ -90,6 +91,13 @@ public abstract class Board extends Observable implements Observer {
      * @param frame The JFrame on which the board will be created.
      */
     public abstract void initBoard(JFrame frame);
+    
+    public void setFlyBehaviour(FlyBehaviour fb){
+    	flyBehaviour = fb;
+    }
+    public void performFly(){
+    	flyBehaviour.fly(this);
+    }
     
     
     /**
