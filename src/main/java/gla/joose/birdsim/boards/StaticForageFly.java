@@ -16,7 +16,6 @@ public class StaticForageFly implements FlyBehaviour {
 	}
 	public void fly() {
 		Bird bird = new Bird();
-		
 		int randRow = rand.nextInt((board.getRows() - 3) + 1) + 0;
     	int randCol = rand.nextInt((board.getColumns() - 3) + 1) + 0;    	
 		board.place(bird,randRow, randCol);
@@ -25,7 +24,6 @@ public class StaticForageFly implements FlyBehaviour {
 		board.updateStockDisplay();
 		
 		while(!board.scareBirds){
-			
 			DistanceMgr dmgr = new DistanceMgr();
 			int current_row = bird.getRow();
 			int current_col = bird.getColumn();
@@ -98,7 +96,6 @@ public class StaticForageFly implements FlyBehaviour {
 							//bingo -food found (eat and move away)
 							Grain grain = (Grain)d.getTargetpiece();
 							grain.deplete();
-
 							if(board.starveBirdspressed){
 		                		grain.remove();
 		                		board.updateStockDisplay();

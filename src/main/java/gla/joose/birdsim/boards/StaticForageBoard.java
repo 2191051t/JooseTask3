@@ -22,7 +22,6 @@ public class StaticForageBoard extends Board{
     JButton hatchEggButton;
     JButton feedBirdButton;
     JButton scareBirdsButton;
-    boolean scareBirds;
     JButton starveBirdsButton;
     
     JLabel noOfGrainsLabel;
@@ -85,6 +84,7 @@ public class StaticForageBoard extends Board{
         scareBirdsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	scareBirds = true;
+
 
         }}); 
         noOfBirdsLabel = new JLabel();
