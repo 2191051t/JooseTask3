@@ -40,6 +40,7 @@ public abstract class Board extends Observable implements Observer {
     protected boolean starveBirdspressed;
     protected boolean panelHasBeenResized = false;
     FlyBehaviour flyBehaviour;
+    InitBoardBehaviour boardBehaviour;
     
     protected Random rand;
     protected boolean scareBirds;
@@ -48,7 +49,11 @@ public abstract class Board extends Observable implements Observer {
     protected int noofgrains;
     JPanel buttonPanel;
     JButton hatchEggButton;
+    JButton feedBirdButton;
     JButton scareBirdsButton;
+    JButton starveBirdsButton;
+    
+    JLabel noOfGrainsLabel;
     JLabel noOfBirdsLabel;
     
     Thread runningthread;
@@ -99,7 +104,6 @@ public abstract class Board extends Observable implements Observer {
      * 
      * @param frame The JFrame on which the board will be created.
      */
-    public abstract void initBoard(JFrame frame);
     
     public void setFlyBehaviour(FlyBehaviour fb){
     	flyBehaviour = fb;
@@ -107,7 +111,12 @@ public abstract class Board extends Observable implements Observer {
     public void performFly(){
     	flyBehaviour.fly();
     }
-    
+    public void setInitBehaviour(InitBoardBehaviour bb){
+    	boardBehaviour = bb;
+    }
+    public void initBoard(JFrame frame){
+    	boardBehaviour.initBoard(frame);
+    }
     
     /**
      * Notifies the board frame on changes in the number of birds/grains;

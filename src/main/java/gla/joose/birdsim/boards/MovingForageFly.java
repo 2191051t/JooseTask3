@@ -111,7 +111,7 @@ public class MovingForageFly implements FlyBehaviour{
 				        			board.updateStockDisplay();
 				        		} 
 				        		int randRow1 = rand.nextInt((board.getRows() - 3) + 1) + 0;
-				            	int randCol2 = rand.nextInt((board.getColumns() - 3) + 1) + 0; 
+				            	int randCol2 = rand.nextInt((board.getColumns() - 3) + 1) + 0;  
 				            	bird.moveTo(randRow1, randCol2);
 				        		bird.setSpeed(20);
 								movedone = true;
@@ -161,6 +161,7 @@ public class MovingForageFly implements FlyBehaviour{
 							}
 							else if(d.getRowDist() ==0){
 								//bingo -food found (eat and move away)
+								
 								Grain grain = (Grain)d.getTargetpiece();
 								grain.deplete();
 								

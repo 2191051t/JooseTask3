@@ -13,7 +13,6 @@ public class FlockFly implements FlyBehaviour {
 	public void fly() {
 		
 		Bird bird = new Bird();
-		
 		int randRow = rand.nextInt((board.getRows() - 3) + 1) + 0;
     	int randCol = rand.nextInt((board.getColumns() - 3) + 1) + 0;
     	
@@ -27,7 +26,6 @@ public class FlockFly implements FlyBehaviour {
         	randCol = rand.nextInt((board.getColumns() - 3) + 1) + 0; 
         	bird.moveTo(randRow, randCol);
     		bird.setSpeed(20);
-			
 		} 
 		bird.remove();
 		board.updateStockDisplay();

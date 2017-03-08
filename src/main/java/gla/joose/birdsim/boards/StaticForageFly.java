@@ -94,6 +94,7 @@ public class StaticForageFly implements FlyBehaviour {
 						}
 						else if(d.getColDist() ==0){
 							//bingo -food found (eat and move away)
+							board.performFly();
 							Grain grain = (Grain)d.getTargetpiece();
 							grain.deplete();
 							if(board.starveBirdspressed){
